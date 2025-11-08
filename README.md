@@ -1,3 +1,19 @@
+# yombeka - AI Image Generator
+
+An AI-powered image generation application built with React and modern web technologies.
+
+## About
+
+Created by [JORO-NIMO](https://github.com/JORO-NIMO)
+
+This project provides an intuitive interface for generating AI images with customizable prompts, featuring:
+- Split gradient/image background design
+- Enhanced prompt input for longer descriptions
+- Image gallery with editing capabilities
+- Responsive mobile-first design
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
