@@ -4,7 +4,7 @@
 
 An AI-powered image generation application built with React and modern web technologies.
 
-🌐 **Live Demo:** [https://joro-nimo.github.io/yombeka](https://joro-nimo.github.io/yombeka)
+🌐 **Live Demo:** Coming soon on Vercel!
 
 ## About
 
@@ -15,17 +15,44 @@ This project provides an intuitive interface for generating AI images with custo
 - Enhanced prompt input for longer descriptions
 - Image gallery with editing capabilities
 - Responsive mobile-first design
+- **FREE AI image generation** using Pollinations AI (no API key required!)
 
 ## Deployment
 
-This project is automatically deployed to GitHub Pages via GitHub Actions.
+### Deploy to Vercel (Recommended - FREE with Backend Support)
 
-### Deploy Manually
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/JORO-NIMO/yombeka)
+
+**Or manually:**
+
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
+
+2. Login and deploy:
+```bash
+vercel login
+vercel
+```
+
+3. Follow the prompts - your app will be live in minutes!
+
+### Features on Vercel:
+- ✅ FREE hosting for frontend + backend
+- ✅ Serverless API functions (no cold starts)
+- ✅ Automatic HTTPS
+- ✅ Custom domain support
+- ✅ Automatic deployments on git push
+
+### Local Development
 
 ```bash
 npm install
-npm run deploy
+npm start
 ```
+
+Then open http://localhost:3001
 
 ---
 
