@@ -1,6 +1,10 @@
 # yombeka - AI Image Generator
 
+**Yombeka** is a Rukiga word meaning "to create", "to generate", or "to build".
+
 An AI-powered image generation application built with React and modern web technologies.
+
+🌐 **Live Demo:** [https://joro-nimo.github.io/yombeka](https://joro-nimo.github.io/yombeka)
 
 ## About
 
@@ -11,6 +15,17 @@ This project provides an intuitive interface for generating AI images with custo
 - Enhanced prompt input for longer descriptions
 - Image gallery with editing capabilities
 - Responsive mobile-first design
+
+## Deployment
+
+This project is automatically deployed to GitHub Pages via GitHub Actions.
+
+### Deploy Manually
+
+```bash
+npm install
+npm run deploy
+```
 
 ---
 
