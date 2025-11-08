@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyezaho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Generator Card -->
+        <div class="app-card">
+            <h1 class="app-title">Yombeka</h1>
+            <p class="app-description">
+                Create stunning images with AI. Use templates or write your own prompts.
+            </p>
+
+            <!-- Prompt Templates -->
+            <div class="templates-section">
+                <h3>Quick Templates</h3>
+                <div class="template-buttons">
+                    <button class="template-btn" data-prompt="A majestic mountain landscape at sunset with golden light">🏔️ Mountain Sunset</button>
+                    <button class="template-btn" data-prompt="Western Ugandan hills">ugandan hills</button>
+                    <button class="template-btn" data-prompt="A magical forest with glowing mushrooms and fairy lights">🧚 Magical Forest</button>
+                    <button class="template-btn" data-prompt="A uganda leader of opposition">Future President of uganda</button>
+                    <button class="template-btn" data-prompt="An abstract digital art piece with vibrant colors and geometric shapes">🎨 Abstract Art</button>
+                    <button class="template-btn" data-prompt="A cute cartoon animal character in anime style">🐱 Anime Pet</button>
+                </div>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-container">
+                <textarea
+                    id="promptInput"
+                    class="prompt-input"
+                    placeholder="Describe the image you want to create..."
+                    rows="3"
+                ></textarea>
+                <div class="button-group">
+                    <button id="generateButton" class="generate-button">
+                        <span id="buttonText">Generate Image</span>
+                        <div id="spinner" class="spinner hidden"></div>
+                    </button>
+                    <button id="randomPromptButton" class="secondary-button">🎲 Random</button>
+                </div>
+            </div>
+
+            <!-- Display area for image, loading, or error messages -->
+            <div class="result-container">
+                <div id="loadingContainer" class="loading-container hidden">
+                    <div class="spinner large"></div>
+                    <p>Generating image...</p>
+                </div>
+
+                <div id="errorContainer" class="error-container hidden">
+                    <p id="errorMessage"></p>
+                </div>
+
+                <div id="imageContainer" class="image-container hidden">
+                    <div class="image-wrapper">
+                        <img id="generatedImage" class="generated-image" alt="Generated from prompt" />
+                        <div class="image-overlay">
+                            <div class="image-actions">
+                                <button id="downloadButton" class="action-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7,10 12,15 17,10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    Download
+                                </button>
+                                <button id="editButton" class="action-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                    Edit
+                                </button>
+                                <button id="saveToGalleryButton" class="action-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <polyline points="21,15 16,10 5,21"/>
+                                    </svg>
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="imagePrompt" class="image-prompt"></p>
+                </div>
+
+                <div id="placeholderContainer" class="placeholder-container">
+                    <svg class="placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21,15 16,10 5,21"/>
+                    </svg>
+                    <p>Your generated image will appear here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section">
+            <div class="gallery-header">
+                <h2>Image Gallery</h2>
+                <button id="clearGalleryButton" class="clear-btn">Clear All</button>
+            </div>
+            <div id="galleryContainer" class="gallery-container">
+                <div class="gallery-empty">
+                    <p>No saved images yet. Generate and save some images to see them here!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Editor Modal -->
+    <div id="editorModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Image Editor</h3>
+                <button id="closeEditor" class="close-btn">&times;</button>
+            </div>
+            <div class="editor-container">
+                <canvas id="editorCanvas"></canvas>
+                <div class="editor-controls">
+                    <div class="control-group">
+                        <label>Brightness:</label>
+                        <input type="range" id="brightnessSlider" min="0" max="200" value="100">
+                    </div>
+                    <div class="control-group">
+                        <label>Contrast:</label>
+                        <input type="range" id="contrastSlider" min="0" max="200" value="100">
+                    </div>
+                    <div class="control-group">
+                        <label>Saturation:</label>
+                        <input type="range" id="saturationSlider" min="0" max="200" value="100">
+                    </div>
+                    <div class="control-group">
+                        <label>Blur:</label>
+                        <input type="range" id="blurSlider" min="0" max="10" value="0">
+                    </div>
+                    <div class="editor-actions">
+                        <button id="resetFilters" class="secondary-button">Reset</button>
+                        <button id="applyFilters" class="generate-button">Apply & Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "my-node-server",
+  "version": "1.0.0",
+  "description": "A Node.js server with compatibility for older Node versions and a frontend build.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "detect-node": "node scripts/detect-node-or-fetch.js",
+    "remove-unused-frontend": "node scripts/remove-unused-frontend.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "license": "MIT"
+}

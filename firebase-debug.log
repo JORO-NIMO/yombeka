@@ -1,0 +1,39 @@
+[debug] [2025-09-24T20:13:38.785Z] ----------------------------------------------------------------------
+[debug] [2025-09-24T20:13:39.388Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2025-09-24T20:13:39.390Z] CLI Version:   14.17.0
+[debug] [2025-09-24T20:13:39.391Z] Platform:      win32
+[debug] [2025-09-24T20:13:39.392Z] Node Version:  v22.17.1
+[debug] [2025-09-24T20:13:39.425Z] Time:          Wed Sep 24 2025 23:13:39 GMT+0300 (East Africa Time)
+[debug] [2025-09-24T20:13:39.427Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[info] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you. 
+[info] 
+[info] i  To change your preferences at any time, run `firebase logout` and `firebase login` again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=804508387&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-09-24T20:14:11.416Z] Error: spawn cmd ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:285:19)
+    at onErrorNT (node:internal/child_process:483:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-09-24T20:16:07.113Z] ----------------------------------------------------------------------
+[debug] [2025-09-24T20:16:07.966Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-09-24T20:16:07.969Z] CLI Version:   14.17.0
+[debug] [2025-09-24T20:16:07.969Z] Platform:      win32
+[debug] [2025-09-24T20:16:07.970Z] Node Version:  v22.17.1
+[debug] [2025-09-24T20:16:07.999Z] Time:          Wed Sep 24 2025 23:16:07 GMT+0300 (East Africa Time)
+[debug] [2025-09-24T20:16:08.000Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-09-24T20:16:08.566Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-09-24T20:16:14.996Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:275:49)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[error] 
+[error] Error: An unexpected error has occurred.
