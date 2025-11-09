@@ -1,8 +1,0 @@
-node_modules
-.git
-.github
-archive
-my-node-server
-*.log
-.env
-.DS_Store

@@ -4,7 +4,7 @@
 
 An AI-powered image generation application built with React and modern web technologies.
 
-🌐 **Live Demo:** Coming soon on Vercel!
+🌐 **Live Demo:** [https://keishari.netlify.app](https://keishari.netlify.app)
 
 ## About
 
@@ -38,31 +38,13 @@ netlify deploy --prod
 
 3. Follow the prompts - your app will be live in minutes!
 
-### Deploy to Vercel (Alternative - FREE with Backend Support)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/JORO-NIMO/yombeka)
-
-**Or manually:**
-
-1. Install Vercel CLI:
-```bash
-npm install -g vercel
-```
-
-2. Login and deploy:
-```bash
-vercel login
-vercel
-```
-
-3. Follow the prompts - your app will be live in minutes!
-
-### Features on Vercel:
+### Features on Netlify:
 - ✅ FREE hosting for frontend + backend
-- ✅ Serverless API functions (no cold starts)
+- ✅ Serverless functions (125K requests/month free)
 - ✅ Automatic HTTPS
 - ✅ Custom domain support
 - ✅ Automatic deployments on git push
+- ✅ 100GB bandwidth/month
 
 ### Local Development
 
