@@ -19,7 +19,26 @@ This project provides an intuitive interface for generating AI images with custo
 
 ## Deployment
 
-### Deploy to Vercel (Recommended - FREE with Backend Support)
+### Deploy to Netlify (Recommended - FREE with Backend Support)
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JORO-NIMO/yombeka)
+
+**Or manually:**
+
+1. Install Netlify CLI:
+```bash
+npm install -g netlify-cli
+```
+
+2. Login and deploy:
+```bash
+netlify login
+netlify deploy --prod
+```
+
+3. Follow the prompts - your app will be live in minutes!
+
+### Deploy to Vercel (Alternative - FREE with Backend Support)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/JORO-NIMO/yombeka)
 
