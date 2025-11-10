@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://keishari.netlify.app/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://keishari.netlify.app/" />
+    <xhtml:link rel="alternate" hreflang="en-UG" href="https://keishari.netlify.app/?hl=ug" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://keishari.netlify.app/?hl=us" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://keishari.netlify.app/?hl=gb" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://keishari.netlify.app/?hl=fr" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://keishari.netlify.app/?hl=sw" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://keishari.netlify.app/" />
   </url>
 </urlset>
